@@ -5,12 +5,13 @@ The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
 The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-*/
+ */
 
 :host {
   display: block;
   width: 12px;
-  background: #efefef url(handle.svg) no-repeat center;
+  background: #efefef;
+  @apply(--iron-splitter);
   box-shadow: inset 0 0 2px 1px #ccc;
   cursor: col-resize;
 }
@@ -18,10 +19,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 :host(.horizontal) {
   width: auto;
   height: 12px;
+  @apply(--iron-splitter-horizontal);
   cursor: row-resize;
-  background-image: url(handle-h.svg);
+  background: #efefef;
 }
 
 :host(:hover, :active) {
   background-color: #ddd;
+  @apply(--iron-splitter-active);
 }
